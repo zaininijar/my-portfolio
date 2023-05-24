@@ -1,7 +1,17 @@
 {
   "compilerOptions": {
+    "ignoreDeprecations": "5.0",
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "ES5",
+      "ES2015",
+      "ES2016",
+      "DOM",
+      "ES2015.Promise"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,

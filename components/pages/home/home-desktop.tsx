@@ -1,27 +1,24 @@
-import { Box, VStack, Text, HStack } from "@chakra-ui/react";
+import { Box, VStack, Text, HStack, Container } from "@chakra-ui/react";
 import React from "react";
 
 type Props = {};
 
 const HomeDesktop = (props: Props) => {
   return (
-    <VStack width={`100%`} border={`1px solid`} minH={`100vh`}>
-      <HStack
-        border={`1px solid`}
-        justify={`space-between`}
-        w={`100%`}
-        minH={`100vh`}
-        alignItems={`center`}
-      >
-        <Box border={`1px solid`} w={`50%`}>
-          <Text>Hi! I am Ahmad Zaini Nijar</Text>
-          <Text>Software Engineer</Text>
-        </Box>
-        <Box border={`1px solid`} w={`50%`}>
-          <Text>Hi! I am Ahmad Zaini Nijar</Text>
-          <Text>Software Engineer</Text>
-        </Box>
-      </HStack>
+    <VStack width={`100%`} minH={`100vh`}>
+      <Container maxW='container.sm'>
+        <HStack
+          justify={`center`}
+          w={`100%`}
+          minH={`100vh`}
+          alignItems={`center`}
+        >
+          <Box textAlign={`center`} w={`100%`}>
+            <Text fontSize={`48px`}>Ahmad Zaini Nijar</Text>
+            <Text>SOFTWARE ENGINEER, FRONT END, BACK END  & APP DEVELOPER.</Text>
+          </Box>
+        </HStack>
+      </Container>
     </VStack>
   );
 };

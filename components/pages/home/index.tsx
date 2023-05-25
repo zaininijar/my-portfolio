@@ -1,6 +1,7 @@
 import React from "react";
 import HomeDesktop from "./home-desktop";
 import HomeMobile from "./home-mobile";
+import Navbar from "../../general/navbar/navbar";
 
 type HomeProps = {
   isMobile: boolean;
@@ -9,11 +10,18 @@ type HomeProps = {
 const Home = (props: HomeProps) => {
   const { isMobile } = props;
 
-  if (isMobile) {
-    return <HomeMobile />;
-  }
+  return isMobile ? (
+    <>
+      <Navbar isMobile={isMobile} />
+      <HomeMobile />
+    </>
+  ) : (
+    <>
+      <Navbar isMobile={isMobile} />
+      <HomeDesktop />
+    </>
+  )
 
-  return <HomeDesktop />;
 };
 
 export default Home;

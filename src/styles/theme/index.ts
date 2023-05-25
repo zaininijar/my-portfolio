@@ -9,8 +9,8 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: "white",
-        color: "gray.800",
+        bg: "#03001C",
+        color: "white",
       },
     },
   },
@@ -18,5 +18,10 @@ export const theme = extendTheme({
     heading: `'Fira Code', sans-serif`,
     body: `'Fira Code', sans-serif`,
   },
-  colors: {},
+  colors: {
+    dark: '#03001C',
+    primary: '#301E67',
+    secondary: '#5B8FB9',
+    light: '#B6EADA',
+  },
 });

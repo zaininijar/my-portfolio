@@ -1,4 +1,5 @@
 import { HStack, Text } from '@chakra-ui/react'
+import Link from 'next/link'
 import React from 'react'
 
 type NavbarDesktopProps = {}
@@ -9,7 +10,9 @@ const NavbarDesktop = (props: NavbarDesktopProps) => {
             <Text color={`secondary`} w="220px" fontSize={`20px`} fontWeight={`bold`}>Ahmad Zaini N.</Text>
             <HStack>
                 {menu.map(menu => (
-                    <Text key={menu.id}>{menu.title}</Text>
+                    <Link key={menu.id} href={`/${menu.name}`}>
+                        <Text _hover={{ color: 'secondary' }}>{menu.title}</Text>
+                    </Link>
                 ))}
             </HStack>
             <Text textAlign={`right`} color={`secondary`} w="220px">Download CV</Text>

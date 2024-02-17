@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Application } from "@splinetool/runtime";
-import { HStack } from "@chakra-ui/react";
+import { HStack, Text } from "@chakra-ui/react";
 
 const ThreeDViewer: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -27,8 +27,13 @@ const ThreeDViewer: React.FC = () => {
   }, []); // Empty dependency array means this effect will only run once after the component mounts
 
   return (
-    <HStack height={`full`} width={`full`}>
-      {loading && <p>Loading...</p>}
+    <HStack
+      height={`full`}
+      width={`full`}
+      alignItems={`center`}
+      justifyContent={`center`}
+    >
+      {loading && <Text>Loading...</Text>}
       <canvas id="canvas3d" style={{ display: loading ? "none" : "block" }} />
     </HStack>
   );

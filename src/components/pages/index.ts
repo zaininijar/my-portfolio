@@ -1,5 +1,5 @@
-import HomePage from '@/components/pages/home/index';
+import Home from './home/index';
 
 export {
-    HomePage
+    Home
 }

@@ -1,6 +1,5 @@
 import React from "react";
-import Home from "../../components/pages/home";
-import { PageHead } from "@/components/general";
+import { PageHead, Home } from "@/components";
 
 const HomePage = (props: { isMobile: boolean }) => {
   const { isMobile } = props;

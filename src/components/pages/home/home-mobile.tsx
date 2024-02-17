@@ -11,7 +11,20 @@ const HomeMobile = (props: Props) => {
       <ThreeDCubic />
       <Container maxW="container.lg" position={`absolute`}>
         <HStack justify={`center`} w={`100%`} h={`100%`} alignItems={`center`}>
-          <Box textAlign={`center`} w={`100%`}>
+          <Box
+            style={{
+              background: "rgba(48, 30, 103, 0.03)",
+              borderRadius: "16px",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+              backdropFilter: "blur(7.7px)",
+              // -webkit-backdrop-filter: "blur(7.7px)",
+              border: "1px solid rgba(48, 30, 103, 0.1)",
+            }}
+            textAlign={`center`}
+            w={`100%`}
+            py={`32px`}
+            color={`light`}
+          >
             <HStack justifyContent={`center`} gap={`10px`}>
               <Text fontSize={`26px`} fontWeight={`extrabold`}>
                 Ahmad
@@ -23,7 +36,7 @@ const HomeMobile = (props: Props) => {
                 Nijar
               </Text>
             </HStack>
-            <HStack
+            <VStack
               justifyContent={`center`}
               fontSize={`14px`}
               fontWeight={`bold`}
@@ -39,7 +52,7 @@ const HomeMobile = (props: Props) => {
                   )}
                 </Link>
               ))}
-            </HStack>
+            </VStack>
           </Box>
         </HStack>
       </Container>

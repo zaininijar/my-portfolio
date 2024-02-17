@@ -20,8 +20,7 @@ const Home = (props: HomeProps) => {
       <Navbar isMobile={isMobile} />
       <HomeDesktop />
     </>
-  )
-
+  );
 };
 
 export default Home;

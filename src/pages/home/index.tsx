@@ -1,27 +1,16 @@
 import React from "react";
-import Home from "../../../components/pages/home";
-import { isMobileDevice } from "@/utils/is-mobile";
-import type {
-  InferGetServerSidePropsType,
-  GetServerSidePropsContext,
-} from "next";
+import Home from "../../components/pages/home";
+import { PageHead } from "@/components/general";
 
-const HomePage = (
-  props: InferGetServerSidePropsType<typeof getServerSideProps>
-) => {
+const HomePage = (props: { isMobile: boolean }) => {
   const { isMobile } = props;
 
-  return <Home isMobile={isMobile} />;
-};
-
-export const getServerSideProps = async ({
-  req,
-}: GetServerSidePropsContext) => {
-  const isMobile = isMobileDevice(req.headers["user-agent"]);
-
-  return {
-    props: { isMobile },
-  };
+  return (
+    <>
+      <PageHead title="ZEN | Home" />
+      <Home isMobile={isMobile} />
+    </>
+  );
 };
 
 export default HomePage;
